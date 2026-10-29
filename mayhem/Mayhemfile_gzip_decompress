@@ -1,0 +1,9 @@
+project: savantenvs/libdeflate
+target: gzip-decompress
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/gzip-decompress/testsuite
+cmds:
+  - cmd: /mayhem/gzip_decompress
+    libfuzzer: true
+    timeout: 10
